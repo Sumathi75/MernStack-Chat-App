@@ -50,19 +50,22 @@ const LoginPage = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          
-
-          
 
           <div>
-            <button className="btn btn-block btn-md mt-2" type="submit">Login</button>
+            <button
+              className="btn btn-block btn-md mt-2 text-gray-100"
+              type="submit"
+            >
+              Login
+            </button>
           </div>
 
-          <Link to='/signup' className='text-sm  hover:underline hover:text-blue-600 mt-2 inline-block'>
-						Don't have an account?
-					</Link>
-
-
+          <Link
+            to="/signup"
+            className="text-sm  hover:underline hover:text-blue-600 mt-2 inline-block text-gray-100"
+          >
+            Don't have an account?
+          </Link>
         </form>
       </div>
     </div>

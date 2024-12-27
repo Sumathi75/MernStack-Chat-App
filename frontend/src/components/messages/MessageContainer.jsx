@@ -51,8 +51,8 @@ const MessageContainer = () => {
             <div className="flex items-center">
               <span className="rounded-full">
                 <img
-                  src={selectedConversation.profilePic || "/default-avatar.png"}
-                  alt={`${selectedConversation.fullName}'s avatar`}
+                  src={selectedConversation.profilePic }
+                  alt={`${selectedConversation.fullName}`}
                   className={`avatar w-12 rounded-full ${
                     isOnline ? "ring-2 ring-green-500" : "ring-2 ring-gray-300"
                   }`}

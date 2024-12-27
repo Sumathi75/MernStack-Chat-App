@@ -14,10 +14,7 @@ const useLogin = () => {
 				body: JSON.stringify({ username, password }),
 			});
 
-			if (!res.ok) {
-				throw new Error("Failed to connect to the server.");
-			  }
-
+			
 			const data = await res.json();
 			if (data.error) {
 				throw new Error(data.error);

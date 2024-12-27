@@ -63,7 +63,6 @@ const SignupPage = () => {
               className="w-full input input-bordered h-10"
               value={inputs.username}
               onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
-
             />
           </div>
 
@@ -105,11 +104,11 @@ const SignupPage = () => {
 
 
           <div>
-            <button className="btn btn-block btn-md mt-2">Sign Up</button>
+            <button className="btn btn-block btn-md mt-2 text-gray-100">Sign Up</button>
           </div>
 
-          <Link to='/login' className='text-sm  hover:underline hover:text-blue-600 mt-2 inline-block'>
-						Don't have an account?
+          <Link to='/login' className='text-sm  text-gray-100 hover:underline hover:text-blue-600 mt-2 inline-block'>
+						Already have an account?
 					</Link>
 
 
