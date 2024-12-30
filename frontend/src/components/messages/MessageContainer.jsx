@@ -76,9 +76,9 @@ const MessageContainer = () => {
               </div>
             </div>
             <div className="flex justify-end">
-              <FaPhoneAlt className="w-12 hover:text-blue-500" />
-              <FaVideo className="w-12 hover:text-blue-500" />
-              <BsThreeDotsVertical className="w-12 hover:text-blue-500" />
+              <FaPhoneAlt className="w-12 hover:text-sky-500" />
+              <FaVideo className="w-12 hover:text-sky-500" />
+              <BsThreeDotsVertical className="w-12 hover:text-sky-500" />
             </div>
           </div>
 

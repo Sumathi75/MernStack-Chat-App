@@ -36,22 +36,24 @@ const Profile = () => {
             />
           </div>
           <div>
-            <h1 className="text-2xl text-zinc-200 font-bold ">
+            <h1 className="text-2xl text-zinc-200 font-bold hover:text-sky-500">
               {authUser.fullName}
             </h1>
             <p className="text-md text-green-500">Available</p>
           </div>
         </div>{" "}
+      <div className="divider px-3 "></div>
+      {/* <div className="divider py-3"></div> */}
         <button
           onClick={toggleAddChat}
-          className="text-2xl hover:text-blue-400  p-2  relative"
+          className="text-2xl hover:text-sky-500  p-2  relative"
         >
           <FiEdit />
           {" "}
         </button>
         <button
           onClick={toggleListVisibility}
-          className="text-3xl hover:text-blue-400  p-2  relative"
+          className="text-3xl hover:text-sky-500  p-2  relative"
         >
           <RiFilter3Fill />{" "}
         </button>
@@ -60,7 +62,7 @@ const Profile = () => {
 
       {addChat && (
         <div
-          className="absolute right-0 mt-2 bg-blue-400 text-white rounded-md 
+          className="absolute right-0 mt-2 bg-sky-500 text-white rounded-md 
          p-3 w-3/4"
         >
           <ul>
@@ -89,7 +91,7 @@ const Profile = () => {
       )}
       {isListVisible && (
         <div
-          className="absolute right-0 mt-2 bg-blue-400 text-white rounded-md 
+          className="absolute right-0 mt-2 bg-sky-500 text-white rounded-md 
          p-3 w-32 "
         >
           <ul >

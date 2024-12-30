@@ -44,7 +44,7 @@ const SearchInput = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button type="submit" className="text-white ">
+        <button type="submit" className="text-white hover:text-sky-500">
           <TbMessageCircleSearch className="w-7 h-7 " />
         </button>
       </div>

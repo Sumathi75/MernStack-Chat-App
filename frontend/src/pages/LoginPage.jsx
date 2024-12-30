@@ -17,7 +17,7 @@ const LoginPage = () => {
       <div className=" w-full p-6  rounded-lg shadow-md bg-blue-600 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 border border-gray-100 ">
         <h1 className="text-3xl font-semibold text-center text-gray-300 ">
           <span className="hover:underline"> Login </span>
-          <span className="text-blue-600"> ChatApp </span>
+          <span className="text-sky-500"> ChatApp </span>
         </h1>
 
         <form onSubmit={handleSubmit}>
@@ -53,7 +53,7 @@ const LoginPage = () => {
 
           <div>
             <button
-              className="btn btn-block btn-md mt-2 text-gray-100"
+              className="btn btn-block btn-md mt-2 text-gray-100 hover:text-sky-500"
               type="submit"
             >
               Login
@@ -62,7 +62,7 @@ const LoginPage = () => {
 
           <Link
             to="/signup"
-            className="text-sm  hover:underline hover:text-blue-600 mt-2 inline-block text-gray-100"
+            className="text-sm  hover:underline hover:text-sky-500 mt-2 inline-block text-gray-100"
           >
             Don't have an account?
           </Link>
