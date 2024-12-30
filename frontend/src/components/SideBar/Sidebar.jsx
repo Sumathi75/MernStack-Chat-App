@@ -8,10 +8,8 @@ const Sidebar = () => {
       <Profile />
       <SearchInput />
       <div className="divider px-3 "></div>
-
-      <div className="flex justify-between m-3 text-gray-200 text-lg">
+      <div className="flex justify-evenly m-3 text-gray-200 text-lg gap-14">
         <p className="underline hover:text-blue-400  ">All</p>
-        <p>Personal</p>
         <p>Group</p>
       </div>
       <Conversations />

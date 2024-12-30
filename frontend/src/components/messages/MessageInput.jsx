@@ -2,6 +2,7 @@ import { useState } from "react";
 import { TbSend2 } from "react-icons/tb";
 import useSendMessage from "../../hooks/useSendMessage";
 import { VscSmiley } from "react-icons/vsc";
+import { GrAttachment } from "react-icons/gr";
 
 const MessageInput = () => {
   const [message, setMessage] = useState("");
@@ -13,31 +14,45 @@ const MessageInput = () => {
     await sendMessage(message);
     setMessage("");
   };
+
   return (
-    <form className="px-4 my-3" onSubmit={handleSubmit}>
-      <div className="w-full relative input flex justify-between rounded-full   border-gray-600">
-        <div className="flex items-center w-5/6 ">
-          <button
-            type="submit"
-            className="absolute  start-1 flex items-center  text-3xl ml-2"
-          >
-            <VscSmiley />{" "}
-          </button>
-          <input
-            type="text"
-            className="ml-10 w-full overflow-scroll"
-            placeholder="Send a message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </div>
-        <div className="flex items-center">
-          <button type="submit" className="absolute  end-1   text-3xl mr-3 ">
-            <TbSend2 />
-          </button>
-        </div>
-      </div>
-    </form>
+    <div className="flex items-center justify-between p-3">
+      <form
+        className="flex items-center w-full bg-gray-800 rounded-full px-3 py-2 justify-between"
+        onSubmit={handleSubmit}
+      >
+        <button
+          type="button"
+          className="text-2xl text-gray-400 hover:text-gray-200 mr-2"
+        >
+          <VscSmiley />
+        </button>
+
+        <input
+          type="text"
+          className="flex-grow bg-transparent outline-none text-white placeholder-gray-300"
+          placeholder="Send a message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+
+        <button
+          type="button"
+          className="text-2xl text-gray-400 hover:text-gray-200 end-0"
+        >
+          <GrAttachment />
+        </button>
+      </form>
+
+      <button
+        type="submit"
+        className="text-3xl  hover:text-blue-500 ml-3"
+        onClick={handleSubmit}
+      >
+        <TbSend2 />
+      </button>
+    </div>
   );
 };
+
 export default MessageInput;

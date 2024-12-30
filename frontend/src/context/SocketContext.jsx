@@ -15,27 +15,27 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io("http://localhost:5000", {
+      const newSocket = io("http://localhost:5000", {
         query: {
           userId: authUser._id,
         },
       });
 
-      setSocket(socket);
+      setSocket(newSocket);
 
-      socket.on("getOnlineUsers", (users) => {
+      newSocket.on("getOnlineUsers", (users) => {
         setOnlineUsers(users);
       });
 
       return () => {
-        socket.close();
+        newSocket.close();
       };
-    } else {
-      if (socket) {
-        socket.close();
-        setSocket(null);
-      }
+    } else if (socket) {
+      socket.close();
+      setSocket(null);
     }
+    // Exclude `socket` from dependencies because `setSocket` ensures updates
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [authUser]);
 
   /**
